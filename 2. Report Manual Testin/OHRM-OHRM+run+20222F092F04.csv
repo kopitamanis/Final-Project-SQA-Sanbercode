@@ -1,0 +1,525 @@
+case_id,title,suite,suite_id,assignee,time_spent_ms,status,finish_time,steps,steps_input_data,steps_expected_result,steps_status,comment,priority,severity,automation,type,tags,step_comments,case_parameter
+1,"Search an user by registered username",Admin,2,"Indry Prillie Paulus",12952,Passed,"2022-09-04 11:59:17","1. User fills the Username field
+2. User clicks search button
+","1. John.Smith
+2. 
+","1. 
+2. 1 records found on the list
+",,,Medium,Normal,"To be automated",Functional,,,
+2,"Search an user by unregistered/incorrect username",Admin,2,"Indry Prillie Paulus",83274,Passed,"2022-09-04 12:00:42","1. User fills the Username field
+2. User clicks search button
+","1. Jhn.Smith
+2. 
+","1. 
+2. Search not found
+",,,Low,Normal,"To be automated",Other,,,
+3,"Search an user by registered Employee name",Admin,2,"Indry Prillie Paulus",18343,Passed,"2022-09-04 12:01:03","1. User fills the Employee name field
+2. User clicks search button
+","1. Fiona Grace
+2. 
+","1. 
+2. 1 records found on the list
+",,,Medium,Normal,"To be automated",Functional,,,
+4,"Search an user by unregistered/incorrect Employee Name",Admin,2,"Indry Prillie Paulus",23328,Passed,"2022-09-04 12:01:29","1. User fills the Employee Name field
+2. User clicks search button
+","1. Peter Parker
+2. 
+","1. 
+2. Search not found
+",,,Low,Normal,"To be automated",Other,,,
+5,"Search by filter user role",Admin,2,"Indry Prillie Paulus",27613,Passed,"2022-09-04 12:01:59","1. User selects User Role filter
+2. User clicks search button
+","1. Admin
+2. 
+","1. 
+2. list displays all users with specific user role filters
+",,,Low,Normal,"To be automated",Functional,,,
+6,"Search by filter status",Admin,2,"Indry Prillie Paulus",29645,Passed,"2022-09-04 12:02:32","1. User selects Status filter
+2. User clicks search button
+","1. Enable
+2. 
+","1. 
+2. the list displays all users with specific status filter
+",,,Low,Normal,"To be automated",Functional,,,
+7,"Search by registered username and matched user role",Admin,2,"Indry Prillie Paulus",23992,Passed,"2022-09-04 12:03:09","1. User fills the username field
+2. User selects user role filter
+3. User clicks search button
+","1. Anthony.Nolan
+2. ESS
+3. 
+","1. 
+2. 
+3. searched user found
+",,,Medium,Normal,"To be automated",Functional,,,
+8,"Search by registered username and mismatched user role",Admin,2,"Indry Prillie Paulus",38292,Passed,"2022-09-04 12:03:52","1. User fills the username field
+2. User selects user role filter
+3. User clicks search button
+","1. Anthony.Nolan
+2. Admin
+3. 
+","1. 
+2. 
+3. searched user not found
+",,,Low,Normal,"To be automated",Functional,,,
+9,"Search by registered username and incorrect employee name",Admin,2,"Indry Prillie Paulus",25780,Passed,"2022-09-04 12:04:20","1. User fills the username field
+2. User fills the employee name field
+3. User clicks search button
+","1. Anthony.Nolan
+2. Antony Nolep
+3. 
+","1. 
+2. 
+3. searched user found
+",,,Low,Normal,"To be automated",Functional,,,
+10,"Search by incorrect username and correct employee name",Admin,2,"Indry Prillie Paulus",33000,Failed,"2022-09-04 12:06:00","1. User fills the username field
+2. User fills the employee name field
+3. User clicks search button
+","1. Anthny.Nolep
+2. Anthony Nolan
+3. 
+","1. 
+2. 
+3. searched user not found
+","1. Passed
+2. Passed
+3. Failed
+","searched user found",Low,Normal,"To be automated",Functional,,"1. 
+2. 
+3. ",
+21,"Reset all filters",Admin,2,"Indry Prillie Paulus",28316,Passed,"2022-09-04 12:07:10","1. User clicks reset button
+","1. Admin
+","1. filter reset, displays list of all registered users
+",,,Low,Minor,"To be automated",Functional,,,
+22,"Add user",Admin,2,"Indry Prillie Paulus",31650,Passed,"2022-09-04 12:07:44","1. User clicks Add button
+2. User selects user role
+3. User fills Employee name field
+4. User selects status
+5. User fills Username field
+6. User fills Password field
+7. User fills confirm password field
+8. User clicks save button
+","1. 
+2. ESS
+3. Joe Root
+4. Enable
+5. Kopi.Hitam
+6. 
+7. 
+8. 
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. add user success, pop up message ""successfully saved""
+",,,High,Major,"To be automated",Functional,,,
+23,"Add Job Title",Admin,2,"Indry Prillie Paulus",21839,Passed,"2022-09-04 12:08:09","1. User clicks add button
+2. User fills Job Title field, required mandatory
+3. User clicks save button
+","1. 
+2. Operational Planner
+3. 
+","1. 
+2. 
+3. job titles added, pop up message ""Succesfully Saved""
+",,,High,Major,"To be automated",Functional,,,
+24,"Delete a job title",Admin,2,"Indry Prillie Paulus",9755,Passed,"2022-09-04 12:08:22","1. User clicks checklist box of a job title
+2. User clicks trash button
+3. User clicks Yes, Delete button
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. Job tittle deleted
+",,,Medium,Normal,"To be automated",Functional,,,
+25,"Edit Nationality",Admin,2,"Indry Prillie Paulus",12994,Passed,"2022-09-04 12:08:37","1. User clicks checklist box of a nationality
+2. User clicks edit button
+3. User edit the nationality name
+4. User clicks save button
+","1. 
+2. 
+3. Americana
+4. 
+","1. 
+2. 
+3. 
+4. update success
+",,,Medium,Normal,"To be automated",Functional,,,
+26,"Not input a file to import data",PIM,3,"Indry Prillie Paulus",16105,Passed,"2022-09-04 12:08:56","1. User clicks upload button
+","1. 
+","1. no upload
+",,,High,Major,"To be automated",Functional,,,
+27,"input a file to import data",PIM,3,"Indry Prillie Paulus",56111,Passed,"2022-09-04 12:09:59","1. User selects a file
+2. User clicks upload button
+","1. importData.csv
+2. 
+","1. 
+2. Success import the data
+",,,High,Major,"To be automated",Functional,,,
+28,"input a blank data file to import data",PIM,3,"Indry Prillie Paulus",49037,Passed,"2022-09-04 12:10:50","1. User selects a file
+2. User clicks upload button
+","1. importData
+2. 
+","1. 
+2. import file failed
+",,,High,Major,"To be automated",Functional,,,
+29,"Search employee by correct ID",PIM,3,"Indry Prillie Paulus",67203,Passed,"2022-09-04 12:12:00","1. User fills employee ID field
+2. User clicks search button
+","1. 
+2. 
+","1. 
+2. records found on the list
+",,,High,Major,"To be automated",Functional,,,
+30,"Search employee by incorrect ID",PIM,3,"Indry Prillie Paulus",39568,Passed,"2022-09-04 12:12:42","1. User fills employee ID field
+2. User clicks search button
+","1. 
+2. 
+","1. 
+2. records not found on the list
+",,,High,Major,"To be automated",Functional,,,
+31,"Add Employee success",PIM,3,"Indry Prillie Paulus",56432,Passed,"2022-09-04 12:13:42","1. User fills Employee Full Name field
+2. User fills Employee ID field
+3. User activates create login details
+4. User fills Username field
+5. User fills Password field
+6. User fills Confirm Password field
+7. User selects status
+8. User clicks save button
+","1. Kopi Hitam Manis
+2. 
+3. 
+4. Kopitamanis
+5. 
+6. 
+7. 
+8. 
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. Employee added, direct to personal detail page
+",,,High,Major,"To be automated",Functional,,,
+32,"Apply leave wrong date",Leave,4,"Indry Prillie Paulus",29366,Passed,"2022-09-04 12:14:14","1. User selects leave type
+2. User selects From Date
+3. User selects To Date
+","1. CAN - Bereavement
+2. 2022-09-05
+3. 2022-09-01
+","1. 
+2. 
+3. warning message ""To date should be after from date""
+",,,High,Major,"To be automated",Functional,,,
+33,"Apply leave success",Leave,4,"Indry Prillie Paulus",40597,Passed,"2022-09-04 12:14:59","1. User selects leave type
+2. User selects From Date
+3. User selects To Date
+4. User clicks Apply button
+","1. CAN - Bereavement
+2. 2022-09-05
+3. 2022-09-06
+4. 
+","1. 
+2. 
+3. 
+4. apply leave success
+",,,High,Major,"To be automated",Functional,,,
+34,"Search leave application",Leave,4,"Indry Prillie Paulus",64536,Passed,"2022-09-04 12:16:07","1. User selects from date
+2. User selects to date
+3. User selects Status
+4. User selects leave type
+5. User clicks search button
+","1. 
+2. 
+3. 
+4. 
+5. 
+","1. 
+2. 
+3. 
+4. 
+5. Searched leave application found
+",,,High,Major,"To be automated",Functional,,,
+35,"Cancel leave application",Leave,4,"Indry Prillie Paulus",61428,Passed,"2022-09-04 12:17:11","1. User selects from date
+2. User selects to date
+3. User selects Status
+4. User selects leave type
+5. User clicks search button
+6. User clicks checklist box of a leave application
+7. User clicks cancel button
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. the leave application's status is canceled
+",,,High,Major,"To be automated",Functional,,,
+36,"Add Leave Entitlement of Multiple employees",Leave,4,"Indry Prillie Paulus",62980,Passed,"2022-09-04 12:18:17","1. User clicks Multiple Employees
+2. User selects leave type
+3. User selects leave period
+4. User fills entitlement
+5. User clicks save button
+6. User clicks confirm button
+","1. 
+2. CAN - Vacation
+3. 2022-01-01 - 2022-12-31
+4. 4
+5. 
+6. 
+","1. 
+2. 
+3. 
+4. 
+5. leave entitlement applied to some employees
+6. 
+",,,High,Major,"To be automated",Functional,,,
+37,"View an employee timesheets",Time,5,"Indry Prillie Paulus",35683,Passed,"2022-09-04 12:18:56","1. User selects Employee Timesheets
+2. User selects an Employee
+3. User clicks view button
+","1. 
+2. 
+3. 
+","1. display list of Employees Timesheets pending action
+2. 
+3. direct to employee timesheets page
+",,,High,Normal,"To be automated",Functional,,,
+38,"Attendance in",Time,5,"Indry Prillie Paulus",20349,Passed,"2022-09-04 12:19:20","1. User selects date
+2. User sets time
+3. User clicks in button
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. attendance in recorded
+",,,High,Major,"To be automated",Functional,,,
+39,"Attendance out",Time,5,"Indry Prillie Paulus",6503,Passed,"2022-09-04 12:19:29","1. User selects date
+2. User sets time
+3. User clicks Out button
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. attendance out recorded
+",,,High,Major,"To be automated",Functional,,,
+40,"View project report",Time,5,"Indry Prillie Paulus",22993,Passed,"2022-09-04 12:19:55","1. User fills project name
+2. User selects project date range
+3. User clicks View button
+","1. The Coca-Cola Company - Coke - Phase 1
+2. 
+3. 
+","1. 
+2. 
+3. 
+",,,Medium,Major,"To be automated",Functional,,,
+41,"Search project info by valid customer name & project and missmatch project admin",Time,5,"Indry Prillie Paulus",37881,Passed,"2022-09-04 12:20:36","1. User fills customer name field
+2. User fills project field
+3. User fills project admin field
+","1. ACME Ltd
+2. ACME Ltd
+3. Kevin Mathews
+","1. 
+2. 
+3. Not found Searched project info
+",,,Medium,Normal,"To be automated",Functional,,,
+42,"Add Candidate",Recruitment,6,"Indry Prillie Paulus",50334,Passed,"2022-09-04 12:21:31","1. User clicks add button
+2. User fills full name field
+3. User fills full email field
+4. User clicks save button
+","1. 
+2. Kopi Hitam Manis
+3. kopitamanis@gmail.com
+4. 
+","1. 
+2. 
+3. 
+4. direct to candidate profil
+",,,High,Major,"To be automated",Functional,,,
+43,"Reject Candidate",Recruitment,6,"Indry Prillie Paulus",164972,Passed,"2022-09-04 12:24:21","1. User fills candidate name
+2. User clicks search button
+3. User clicks view button
+4. User clicks reject button
+5. User clicks save button
+","1. Chris Harris
+2. 
+3. 
+4. 
+5. 
+","1. 
+2. 
+3. 
+4. 
+5. direct to candidate profil with status: rejected
+",,,High,Major,"To be automated",Functional,,,
+44,"Add a Vacancy",Recruitment,6,"Indry Prillie Paulus",52627,Passed,"2022-09-04 12:25:17","1. User clicks add button
+2. User fills vacancy name field
+3. User selects Job title
+4. User fills hiring manager field
+5. User clicks save button
+","1. 
+2. Operational
+3. Content Specialist
+4. Peter Mac Anderson
+5. 
+","1. 
+2. 
+3. 
+4. 
+5. vacancy has been added
+",,,High,Major,"To be automated",Functional,,,
+44,"Add a Vacancy",Recruitment,6,"Indry Prillie Paulus",0,Retest,"2022-09-04 12:25:42","1. User clicks add button
+2. User fills vacancy name field
+3. User selects Job title
+4. User fills hiring manager field
+5. User clicks save button
+","1. 
+2. Operational
+3. Content Specialist
+4. Peter Mac Anderson
+5. 
+","1. 
+2. 
+3. 
+4. 
+5. vacancy has been added
+",,,High,Major,"To be automated",Functional,,,
+44,"Add a Vacancy",Recruitment,6,"Indry Prillie Paulus",95796,Passed,"2022-09-04 12:27:21","1. User clicks add button
+2. User fills vacancy name field
+3. User selects Job title
+4. User fills hiring manager field
+5. User clicks save button
+","1. 
+2. Operational
+3. Content Specialist
+4. Peter Mac Anderson
+5. 
+","1. 
+2. 
+3. 
+4. 
+5. vacancy has been added
+",,,High,Major,"To be automated",Functional,,,
+45,"Update Personal Details","My Info",7,"Indry Prillie Paulus",132198,Passed,"2022-09-04 12:27:33","1. User updates firstname in employee full name field
+2. User fills nickname field
+3. User changes marital status
+4. User clicks save button
+","1. Hola
+2. oya
+3. single
+4. 
+","1. 
+2. 
+3. 
+4. Persona Detail Updated
+",,,High,Major,"To be automated",Functional,,,
+46,"First Name Empty","My Info",7,"Indry Prillie Paulus",2462,Passed,"2022-09-04 12:27:39","1. User blanks firstname field
+","1. 
+","1. alert message ""Required""
+",,,Medium,Major,"Not automated",Other,,,
+47,"First Name & Last Name Empty","My Info",7,"Indry Prillie Paulus",9817,Passed,"2022-09-04 12:27:51","1. User blanks firstname field
+2. User blanks lastname field
+","1. 
+2. 
+","1. alert message ""Required""
+2. alert message ""Required""
+",,,Medium,Major,"To be automated",Functional,,,
+48,"View An Employee Performance Track",Performance,8,"Indry Prillie Paulus",71177,Passed,"2022-09-04 12:29:05","1. User fill employee name field
+2. User clicks search button
+3. User clicks view button
+","1. Anthony Nolan
+2. 
+3. 
+","1. 
+2. 
+3. direct to employee tracker logs
+",,,Medium,Normal,"To be automated",Functional,,,
+49,"Add log to Employee Performance Track",Performance,8,"Indry Prillie Paulus",51127,Passed,"2022-09-04 12:29:59","1. User fill employee name field
+2. User clicks search button
+3. User clicks view button
+4. User clicks add log button
+5. user fills Log field
+6. User selects positive/negative
+7. User fills comment field
+8. User clicks save button
+","1. Anthony Nolan
+2. 
+3. 
+4. 
+5. Dicipline
+6. 
+7. 
+8. 
+","1. 
+2. 
+3. direct to employee tracker logs
+4. 
+5. 
+6. 
+7. 
+8. 
+",,,Medium,Normal,"To be automated",Functional,,,
+50,"View an Employee Contact",Directory,9,"Indry Prillie Paulus",17790,Passed,"2022-09-04 12:30:20","1. User selects one of employee
+2. User clicks the picture
+","1. 
+2. 
+","1. 
+2. pop up information about selected employee
+","1. Passed
+2. Passed
+",,Low,Normal,"To be automated",Functional,,"1. 
+2. ",
+51,"Access to maintenance menu",Maintenance,10,"Indry Prillie Paulus",56975,Passed,"2022-09-04 12:33:51","1. User clicks maintenance menu
+2. User fills password field
+3. User clicks confirm button
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. display purge employee records
+",,,High,Major,"To be automated",Functional,,,
+53,"Access to maintenance menu wrong password",Maintenance,10,"Indry Prillie Paulus",9771,Passed,"2022-09-04 12:35:52","1. User clicks maintenance menu
+2. User fills password field
+3. User clicks confirm button
+","1. 
+2. 
+3. 
+","1. 
+2. 
+3. access failed
+",,,High,Major,"To be automated",Functional,,,
+52,"Download Personal Data Employee",Maintenance,10,"Indry Prillie Paulus",19350,Passed,"2022-09-04 12:34:12","1. User clicks maintenance menu
+2. User fills password field
+3. User clicks confirm button
+4. User click Access Records
+5. User fills employee name field
+6. User Clicks search
+7. User clicks download
+","1. 
+2. 
+3. 
+4. 
+5. John Smith
+6. 
+7. 
+","1. 
+2. 
+3. display purge employee records
+4. 
+5. 
+6. display selected employee's data
+7. Selected employee's data downloaded
+",,,High,Major,"To be automated",Functional,,,
