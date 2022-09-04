@@ -1,0 +1,495 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases
+,,,,,,,,,,,,,,,,,,,,2,,Admin,1
+,,,,,,,,,,,,,,,,,,,,3,,PIM,1
+,,,,,,,,,,,,,,,,,,,,4,,Leave,1
+,,,,,,,,,,,,,,,,,,,,5,,Time,1
+,,,,,,,,,,,,,,,,,,,,6,,Recruitment,1
+,,,,,,,,,,,,,,,,,,,,7,,"My Info",1
+,,,,,,,,,,,,,,,,,,,,8,,Performance,1
+,,,,,,,,,,,,,,,,,,,,9,,Directory,1
+,,,,,,,,,,,,,,,,,,,,10,,Maintenance,1
+1,"Search an user by registered username",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, the list displays a searched user",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills the Username field
+2. User clicks search button
+","1. 
+2. 1 records found on the list
+","1. John.Smith
+2. 
+",,,2,,Admin,
+2,"Search an user by unregistered/incorrect username",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, pop up message ""No Records Found""",,low,normal,other,negative,to-be-automated,actual,no,e2e,classic,"1. User fills the Username field
+2. User clicks search button
+","1. 
+2. Search not found
+","1. Jhn.Smith
+2. 
+",,,2,,Admin,
+3,"Search an user by registered Employee name",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, the list displays a searched user",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills the Employee name field
+2. User clicks search button
+","1. 
+2. 1 records found on the list
+","1. Fiona Grace
+2. 
+",,,2,,Admin,
+4,"Search an user by unregistered/incorrect Employee Name",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, no changes",,low,normal,other,negative,to-be-automated,actual,no,e2e,classic,"1. User fills the Employee Name field
+2. User clicks search button
+","1. 
+2. Search not found
+","1. Peter Parker
+2. 
+",,,2,,Admin,
+5,"Search by filter user role",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, the list displays all users with specific user role filters",,low,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects User Role filter
+2. User clicks search button
+","1. 
+2. list displays all users with specific user role filters
+","1. Admin
+2. 
+",,,2,,Admin,
+6,"Search by filter status",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, the list displays all users with specific status filter",,low,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects Status filter
+2. User clicks search button
+","1. 
+2. the list displays all users with specific status filter
+","1. Enable
+2. 
+",,,2,,Admin,
+7,"Search by registered username and matched user role",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, display user according to search",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills the username field
+2. User selects user role filter
+3. User clicks search button
+","1. 
+2. 
+3. searched user found
+","1. Anthony.Nolan
+2. ESS
+3. 
+",,,2,,Admin,
+8,"Search by registered username and mismatched user role",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, the list blank and pop up message ""No Records Found""",,low,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. User fills the username field
+2. User selects user role filter
+3. User clicks search button
+","1. 
+2. 
+3. searched user not found
+","1. Anthony.Nolan
+2. Admin
+3. 
+",,,2,,Admin,
+9,"Search by registered username and incorrect employee name",,"User has accessed Admin menu - User Managemant sub menu, display list of all users","still at the same page, display searched user",,low,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills the username field
+2. User fills the employee name field
+3. User clicks search button
+","1. 
+2. 
+3. searched user found
+","1. Anthony.Nolan
+2. Antony Nolep
+3. 
+",,,2,,Admin,
+10,"Search by incorrect username and correct employee name",,"User has accessed Admin menu - User Management sub menu, display list of all users","still at the same page, the list blanks and pop up message ""No Records Found""",,low,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. User fills the username field
+2. User fills the employee name field
+3. User clicks search button
+","1. 
+2. 
+3. searched user not found
+","1. Anthny.Nolep
+2. Anthony Nolan
+3. 
+",,,2,,Admin,
+21,"Reset all filters",,"User has accessed Admin menu - User Managemant sub menu, display user search","still at the same page, the list displays all registered users",,low,minor,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks reset button
+","1. filter reset, displays list of all registered users
+","1. Admin
+",,,2,,Admin,
+22,"Add user",,"User has accessed Admin menu - User Management sub menu, display list of all users","pop up message ""successfully saved"", 
+number of records increases",,high,major,functional,positive,to-be-automated,draft,no,e2e,classic,"1. User clicks Add button
+2. User selects user role
+3. User fills Employee name field
+4. User selects status
+5. User fills Username field
+6. User fills Password field
+7. User fills confirm password field
+8. User clicks save button
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. add user success, pop up message ""successfully saved""
+","1. 
+2. ESS
+3. Joe Root
+4. Enable
+5. Kopi.Hitam
+6. 
+7. 
+8. 
+",,,2,,Admin,
+23,"Add Job Title",,"User has accessed Admin menu - Job - Job Titles, display list of all job titles","number of records increases",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks add button
+2. User fills Job Title field, required mandatory
+3. User clicks save button
+","1. 
+2. 
+3. job titles added, pop up message ""Succesfully Saved""
+","1. 
+2. Operational Planner
+3. 
+",,,2,,Admin,
+24,"Delete a job title",,"User has accessed Admin menu - Job - Job Titles, display list of all job titles","number of records reduced",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks checklist box of a job title
+2. User clicks trash button
+3. User clicks Yes, Delete button
+","1. 
+2. 
+3. Job tittle deleted
+","1. 
+2. 
+3. 
+",,,2,,Admin,
+25,"Edit Nationality",,"User has accessed Admin menu - Nationalities, display list of all Nationalities","still on the same page, pop up message ""Successfully Updated""",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks checklist box of a nationality
+2. User clicks edit button
+3. User edit the nationality name
+4. User clicks save button
+","1. 
+2. 
+3. 
+4. update success
+","1. 
+2. 
+3. Americana
+4. 
+",,,2,,Admin,
+26,"Not input a file to import data",,"User has accessed PIM menu - Configuration - Data Import","still ate the same page, warning message 'Required'",,high,major,functional,negative,to-be-automated,actual,no,unknown,classic,"1. User clicks upload button
+","1. no upload
+","1. 
+",,,3,,PIM,
+27,"input a file to import data",,"User has accessed PIM menu - Configuration - Data Import","still ate the same page, Pop up massage ""Success""",,high,major,functional,positive,to-be-automated,actual,no,unknown,classic,"1. User selects a file
+2. User clicks upload button
+","1. 
+2. Success import the data
+","1. importData.csv
+2. 
+",,,3,,PIM,
+28,"input a blank data file to import data",,"User has accessed PIM menu - Configuration - Data Import","still ate the same page, Pop up massage ""Failed to import""",,high,major,functional,negative,to-be-automated,actual,no,unknown,classic,"1. User selects a file
+2. User clicks upload button
+","1. 
+2. import file failed
+","1. importData
+2. 
+",,,3,,PIM,
+29,"Search employee by correct ID",,"User has accessed PIM menu - Employee List, display list of all employees","still at the same page, display a searched user",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills employee ID field
+2. User clicks search button
+","1. 
+2. records found on the list
+","1. 
+2. 
+",,,3,,PIM,
+30,"Search employee by incorrect ID",,"User has accessed PIM menu - Employee List, display list of all employees","still at the same page, the list blank and pop up message ""No Records Found""",,high,major,functional,negative,to-be-automated,actual,no,e2e,classic,"1. User fills employee ID field
+2. User clicks search button
+","1. 
+2. records not found on the list
+","1. 
+2. 
+",,,3,,PIM,
+31,"Add Employee success",,"User has accessed PIM menu - Add Employee","pop up message ""Successfully Saved""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills Employee Full Name field
+2. User fills Employee ID field
+3. User activates create login details
+4. User fills Username field
+5. User fills Password field
+6. User fills Confirm Password field
+7. User selects status
+8. User clicks save button
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. Employee added, direct to personal detail page
+","1. Kopi Hitam Manis
+2. 
+3. 
+4. Kopitamanis
+5. 
+6. 
+7. 
+8. 
+",,,3,,PIM,
+32,"Apply leave wrong date",,"User has accessed Leave menu - Apply","still at the same page, warning message ""To date should be after from date""",,high,major,functional,negative,to-be-automated,actual,no,e2e,classic,"1. User selects leave type
+2. User selects From Date
+3. User selects To Date
+","1. 
+2. 
+3. warning message ""To date should be after from date""
+","1. CAN - Bereavement
+2. 2022-09-05
+3. 2022-09-01
+",,,4,,Leave,
+33,"Apply leave success",,"User has accessed Leave menu - Apply","still at the same page, pop up message ""Succesfully saved""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects leave type
+2. User selects From Date
+3. User selects To Date
+4. User clicks Apply button
+","1. 
+2. 
+3. 
+4. apply leave success
+","1. CAN - Bereavement
+2. 2022-09-05
+3. 2022-09-06
+4. 
+",,,4,,Leave,
+34,"Search leave application",,"User has accessed Leave menu - My leave","display list of leave application",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects from date
+2. User selects to date
+3. User selects Status
+4. User selects leave type
+5. User clicks search button
+","1. 
+2. 
+3. 
+4. 
+5. Searched leave application found
+","1. 
+2. 
+3. 
+4. 
+5. 
+",,,4,,Leave,
+35,"Cancel leave application",,"User has accessed Leave menu - My leave","pop up message ""Succesfully Updated""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects from date
+2. User selects to date
+3. User selects Status
+4. User selects leave type
+5. User clicks search button
+6. User clicks checklist box of a leave application
+7. User clicks cancel button
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. the leave application's status is canceled
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+",,,4,,Leave,
+36,"Add Leave Entitlement of Multiple employees",,"User has accessed Leave menu - Entitlements - Add Entitlements","display list of some employees whose leave entitlements added, pop up message ""Success""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks Multiple Employees
+2. User selects leave type
+3. User selects leave period
+4. User fills entitlement
+5. User clicks save button
+6. User clicks confirm button
+","1. 
+2. 
+3. 
+4. 
+5. leave entitlement applied to some employees
+6. 
+","1. 
+2. CAN - Vacation
+3. 2022-01-01 - 2022-12-31
+4. 4
+5. 
+6. 
+",,,4,,Leave,
+37,"View an employee timesheets",,"User has accessed Time menu - Timesheets","display selected employee timesheet",,high,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects Employee Timesheets
+2. User selects an Employee
+3. User clicks view button
+","1. display list of Employees Timesheets pending action
+2. 
+3. direct to employee timesheets page
+","1. 
+2. 
+3. 
+",,,5,,Time,
+38,"Attendance in",,"User has accessed Time menu -Attendance - punch in/out","display punch out form, pop up message ""Succesfully saved",,high,major,functional,undefined,to-be-automated,actual,no,e2e,classic,"1. User selects date
+2. User sets time
+3. User clicks in button
+","1. 
+2. 
+3. attendance in recorded
+","1. 
+2. 
+3. 
+",,,5,,Time,
+39,"Attendance out",,"User has accessed Time menu -Attendance - punch in/out","display punch in form, pop up message ""Succesfully saved""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects date
+2. User sets time
+3. User clicks Out button
+","1. 
+2. 
+3. attendance out recorded
+","1. 
+2. 
+3. 
+",,,5,,Time,
+40,"View project report",,"User has accessed Time menu - Reports - Project Reports","display list of project activity",,medium,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills project name
+2. User selects project date range
+3. User clicks View button
+","1. 
+2. 
+3. 
+","1. The Coca-Cola Company - Coke - Phase 1
+2. 
+3. 
+",,,5,,Time,
+41,"Search project info by valid customer name & project and missmatch project admin",,"User has accessed Time menu - Project Info - Projects","pop up message ""No Records Found""",,medium,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. User fills customer name field
+2. User fills project field
+3. User fills project admin field
+","1. 
+2. 
+3. Not found Searched project info
+","1. ACME Ltd
+2. ACME Ltd
+3. Kevin Mathews
+",,,5,,Time,
+42,"Add Candidate",,"User has accessed Recruitment menu - Candidate","display candidate profil form, pop up message ""Success""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks add button
+2. User fills full name field
+3. User fills full email field
+4. User clicks save button
+","1. 
+2. 
+3. 
+4. direct to candidate profil
+","1. 
+2. Kopi Hitam Manis
+3. kopitamanis@gmail.com
+4. 
+",,,6,,Recruitment,
+43,"Reject Candidate",,"User has accessed Recruitment menu - Candidate, display list of all candidates","display candidate's profil status rejected",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fills candidate name
+2. User clicks search button
+3. User clicks view button
+4. User clicks reject button
+5. User clicks save button
+","1. 
+2. 
+3. 
+4. 
+5. direct to candidate profil with status: rejected
+","1. Chris Harris
+2. 
+3. 
+4. 
+5. 
+",,,6,,Recruitment,
+44,"Add a Vacancy",,"User has accessed Recruitment menu - Vacancies, display list of all recorded vacancies","pop up message ""Success""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks add button
+2. User fills vacancy name field
+3. User selects Job title
+4. User fills hiring manager field
+5. User clicks save button
+","1. 
+2. 
+3. 
+4. 
+5. vacancy has been added
+","1. 
+2. Operational
+3. Content Specialist
+4. Peter Mac Anderson
+5. 
+",,,6,,Recruitment,
+45,"Update Personal Details",,"User has accessed My Info menu, display Personal Details form","still at the same page, pop up message ""Success""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User updates firstname in employee full name field
+2. User fills nickname field
+3. User changes marital status
+4. User clicks save button
+","1. 
+2. 
+3. 
+4. Persona Detail Updated
+","1. Hola
+2. oya
+3. single
+4. 
+",,,7,,"My Info",
+46,"First Name Empty",,"User has accessed My Info menu, display Personal Details form","still at the same page, alert message ""Required""",,medium,major,other,negative,is-not-automated,actual,no,unknown,classic,"1. User blanks firstname field
+","1. alert message ""Required""
+","1. 
+",,,7,,"My Info",
+47,"First Name & Last Name Empty",,"User has accessed My Info menu, display Personal Details form","still at the same page, alert message ""Required"" at the bottom of the box field",,medium,major,functional,negative,to-be-automated,actual,no,e2e,classic,"1. User blanks firstname field
+2. User blanks lastname field
+","1. alert message ""Required""
+2. alert message ""Required""
+","1. 
+2. 
+",,,7,,"My Info",
+48,"View An Employee Performance Track",,"User has accessed Performance menu - Employee trackers, display list of some employees performance","display tracker logs",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fill employee name field
+2. User clicks search button
+3. User clicks view button
+","1. 
+2. 
+3. direct to employee tracker logs
+","1. Anthony Nolan
+2. 
+3. 
+",,,8,,Performance,
+49,"Add log to Employee Performance Track",,"User has accessed Performance menu - Employee trackers, display list of some employees performance","display tracker logs, pop up message ""success""",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User fill employee name field
+2. User clicks search button
+3. User clicks view button
+4. User clicks add log button
+5. user fills Log field
+6. User selects positive/negative
+7. User fills comment field
+8. User clicks save button
+","1. 
+2. 
+3. direct to employee tracker logs
+4. 
+5. 
+6. 
+7. 
+8. 
+","1. Anthony Nolan
+2. 
+3. 
+4. 
+5. Dicipline
+6. 
+7. 
+8. 
+",,,8,,Performance,
+50,"View an Employee Contact",,"User has accessed Directory menu","pop up information about selected employee",,low,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User selects one of employee
+2. User clicks the picture
+","1. 
+2. pop up information about selected employee
+","1. 
+2. 
+",,,9,,Directory,
+51,"Access to maintenance menu",,"user has logged in, display PIM menu","display purge employee records",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks maintenance menu
+2. User fills password field
+3. User clicks confirm button
+","1. 
+2. 
+3. display purge employee records
+","1. 
+2. 
+3. 
+",,,10,,Maintenance,
+52,"Download Personal Data Employee",,"user has logged in, display PIM menu","display selected employee's summary data",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks maintenance menu
+2. User fills password field
+3. User clicks confirm button
+4. User click Access Records
+5. User fills employee name field
+6. User Clicks search
+7. User clicks download
+","1. 
+2. 
+3. display purge employee records
+4. 
+5. 
+6. display selected employee's data
+7. Selected employee's data downloaded
+","1. 
+2. 
+3. 
+4. 
+5. John Smith
+6. 
+7. 
+",,,10,,Maintenance,
+53,"Access to maintenance menu wrong password",,"user has logged in, display PIM menu","alert message ""Invalid Credential""",,high,major,functional,positive,to-be-automated,actual,no,e2e,classic,"1. User clicks maintenance menu
+2. User fills password field
+3. User clicks confirm button
+","1. 
+2. 
+3. access failed
+","1. 
+2. 
+3. 
+",,,10,,Maintenance,
